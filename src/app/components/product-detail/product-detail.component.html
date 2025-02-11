@@ -1,0 +1,18 @@
+<div class="container mt-4">
+    <div id="cart-alert" class="container mt-2"></div>
+    <div class="row">
+      <div class="col-md-6">
+        <img [src]="product.image" class="img-fluid rounded shadow-sm" [alt]="product.title">
+      </div>
+      <div class="col-md-6">
+        <h2>{{ product.title }}</h2>
+        <p class="text-muted">{{ product.category }}</p>
+        <p class="lead">{{ product.description }}</p>
+        <h3 class="text-success">${{ product.price }}</h3>
+        <p class="fw-bold">⭐ {{ product.rating.rate }} ({{ product.rating.count }} valoraciones)</p>
+        <button class="btn btn-success" (click)="addToCart()">Añadir al Carrito</button>
+        <a class="btn btn-outline-secondary ms-2" routerLink="/">Volver</a>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,29 @@
+<div class="container mt-4">
+    <h2 class="text-center">Lista de Productos</h2>
+    <div id="cart-alert" class="container mt-2"></div>
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let product of products">
+        <div class="card h-100 shadow-sm">
+          <img [src]="product.image" class="card-img-top" [alt]="product.title">
+          <div class="card-body">
+            <!-- Nombre del producto con tooltip -->
+            <h5 class="card-title text-truncate" 
+                [attr.title]="product.title"
+                data-bs-toggle="tooltip" 
+                data-bs-placement="top">
+              {{ product.title }}
+            </h5>
+  
+            <p class="card-text text-muted">{{ product.category }}</p>
+            <p class="card-text"><strong>${{ product.price }}</strong></p>
+            <div class="d-flex justify-content-between">
+              <button class="btn btn-primary" [routerLink]="['/product', product.id]">Ver Detalles</button>
+              <button class="btn btn-success" (click)="addToCart(product)">Añadir al Carrito</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
