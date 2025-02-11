@@ -1,22 +1,28 @@
 .card-title {
-    white-space: nowrap;  /* Evita que el texto se desborde a otra línea */
-    overflow: hidden;     /* Oculta el texto que se sale del contenedor */
-    text-overflow: ellipsis; /* Muestra los "..." cuando el texto es largo */
-    max-width: 100%;     /* Asegura que se ajuste al ancho del contenedor */
-  }
-  .card {
+    white-space: nowrap;
+    /* Evita que el texto se desborde a otra línea */
+    overflow: hidden;
+    /* Oculta el texto que se sale del contenedor */
+    text-overflow: ellipsis;
+    /* Muestra los "..." cuando el texto es largo */
+    max-width: 100%;
+    /* Asegura que se ajuste al ancho del contenedor */
+}
+
+.card {
     transition: transform 0.2s ease-in-out;
-    
+
     &:hover {
-      transform: scale(1.05);
+        transform: scale(1.05);
     }
-  
+
     img {
-      height: 200px;
-      object-fit: cover;
+        height: 200px;
+        object-fit: cover;
     }
-  }
-  .container {
-    padding-bottom: 120px; /* Ajusta el espacio según sea necesario */
-  }
-  
+}
+
+.container {
+    padding-bottom: 120px;
+    /* Ajusta el espacio según sea necesario */
+}

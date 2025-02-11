@@ -20,9 +20,9 @@
                         <td>{{ item.title }}</td>
                         <td>${{ item.price }}</td>
                         <td>
-                            <button class="btn btn-sm btn-primary" (click)="increaseQuantity(item)">+</button>
-                            <span class="mx-2">{{ item.quantity }}</span>
                             <button class="btn btn-sm btn-danger" (click)="decreaseQuantity(item)">-</button>
+                            <span class="mx-2">{{ item.quantity }}</span>
+                            <button class="btn btn-sm btn-primary" (click)="increaseQuantity(item)">+</button>
                         </td>
                         <td>${{ item.price * (item.quantity ?? 1) }}</td>
                         <td>
